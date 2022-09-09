@@ -1,0 +1,13 @@
+@use "./mixins.scss" as mixin;
+
+
+@include mixin.globalStyle;
+@include mixin.headerStyle;
+@include mixin.sectionOneStyle;
+@include mixin.sectionTwoStyle;
+@include mixin.sectionThreeStyle;
+@include mixin.sectionFourStyle;
+@include mixin.sectionFiveStyle;
+@include mixin.sectionSixStyle;
+@include mixin.sectionSevenStyle;
+@include mixin.footerStyle;

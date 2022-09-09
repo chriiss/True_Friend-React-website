@@ -1,0 +1,153 @@
+{
+    "global": {
+        "snIcon": [
+            {
+                "link": "https://s1.qwant.com/thumbr/0x380/0/2/b52cb90bac622641bd96211cb4d83b5a21cfe99d1491a116ac08b0f69bf107/logo-facebook-black-and-white-computer-icons-facebook.jpg?u=https%3A%2F%2Fp7.hiclipart.com%2Fpreview%2F201%2F692%2F981%2Flogo-facebook-black-and-white-computer-icons-facebook.jpg&q=0&b=1&p=0&a=0",
+                "name": "facebook icon"
+            },
+            {
+                "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNB-tpBEMHHyk6IA0Jl4jmuYOcqWOahJ0ugg&usqp=CAU",
+                "name": "twitter icon"
+            },
+            {
+                "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbJkb7ql140Sl6mkeIRkWmFwRR6Z4p-k0OfQ&usqp=CAU",
+                "name": "instagram icon"
+            },
+            {
+                "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcanXmZe_T2U6jqUk0GD6I7dTpxPjZ_ieUpoTD9j-KY483kr-5cfSxTfPoblDE8UQg6Zc&usqp=CAU",
+                "name": "youtube icon"
+            }
+        ]
+    },
+    "navbarComponent": {
+       "logo": {
+            "link": "https://capp.nicepage.com/e8799cd0ab432ff8c5e9fea7f7518a9fbe72aa15/images/default-logo.png",
+            "name": "logo navbar"
+        },
+        "list": [
+            {
+                "name": "Page1",
+                "link": "#"
+            },
+            {
+                "name": "Page2",
+                "link": "#"
+            }
+        ]
+    },
+    "sectionOneComponent": {
+        "title": {
+            "sub": "vet clinic",
+            "principal": "true friend"
+        }
+    },
+    "sectionTwoComponent": {
+        "gridOne": {
+            "cardOne": {
+                "title": "Clean It Right 'Round The Pets"
+            },
+            "cardTwo": {
+                "icon": {
+                    "link": "https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/heart.png",
+                    "name": "icon heart"
+                },
+                "text": "Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            "cardThree": {
+                "img": {
+                    "link": "https://www.rabbitcaretips.com/wp-content/uploads/2019/05/can-rabbits-understand-humans-e1588150290815.jpg",
+                    "name": "bunny and human"
+                }
+            }
+        },
+        "gridTwo": {
+            "cardOne": {
+                "icon": {
+                    "link": "https://cdn-icons-png.flaticon.com/512/234/234999.png",
+                    "name": "icon bunny head"
+                },
+                "text": "Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            "cardTwo": {
+                "img": {
+                    "link": "https://p.favim.com/orig/2018/08/19/baby-cute-rabbit-Favim.com-6146569.jpg",
+                    "name": "bunny sunglasses"
+                }
+            },
+            "cardThree": {
+                "icon": {
+                    "link": "https://static.thenounproject.com/png/137629-200.png",
+                    "name": "icon bunny"
+                },
+                "text": "Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            }
+        }
+    },
+    "sectionThreeComponent": {
+        "title": "Bunny Stories News,",
+        "titleBis": "Tips & Tricks",
+        "subTitle": "tips for life with bunny"
+    },
+    "sectionFourComponent": {
+        "title": {
+            "primary": "vet clinic",
+            "secondary": "Rescue a Pet"
+        },
+        "text": "Since newly abandoned pups are competing with each other for human heartstrings, evolution says they should be most adorable around six and 11 weeks.",
+        "imgCarousel": [
+            {
+                "link": "https://miro.medium.com/max/1400/1*gEJ3HrLJ3vGcSAvjoa1dog.jpeg",
+                "name": "bunny",
+                "id": "imgOne"
+            },
+            {
+                "link": "https://thumbs.dreamstime.com/b/sad-bunny-bench-raster-illustration-65834939.jpg",
+                "name": "sad bunny",
+                "id": "imgTwo"
+            }
+        ],
+        "page": [
+            {
+                "anchor": "#imgOne"
+            },
+            {
+                "anchor": "#imgTwo"
+            }
+        ]
+    },
+    "sectionFiveComponent": {
+        "title": {
+            "primary": "bunny training",
+            "secondary": "We use humane, natural, dog training methods"
+        },
+        "img": {
+            "link": "http://www.calacademy.org/sites/default/files/assets/images/Education_Images/TYE_Images/breedingbunnies_blackbunnyattheoaklandzoo_1200x900_credit_ianmacd.jpg",
+            "name": "black bunny"
+        },
+        "text": "Positive Bunny Training is a rewards-based approach to teaching pet parents how bunnies think, learn and communicate. We focus on rewarding the behaviors we like to encourage appropriate dog behavior in the real world."
+    },
+    "sectionSixComponent": {
+        "title": {
+            "primary": "Basic Bunny",
+            "secondary": "training"
+        },
+        "text": {
+            "primary": "Whether or not you plan on competing in dog sports and events, it’s critical that all dogs receive basic training, from how to walk well on leash to being comfortable with strangers.",
+            "secondary": "We focus on rewarding the behaviors we like to encourage appropriate bunny behavior in the real world.",
+            "button": "all services"
+        }
+    },
+    "sectionSevenComponent": {
+        "text": {
+            "title": "Need a Sweet Heart?",
+            "paragraph": "Whether or not you plan on competing in dog sports and events, it’s critical that all dogs receive basic training, from how to walk well on leash to being comfortable with strangers.",
+            "placeholder": "Enter your Name",
+            "submit": "submit"
+        }
+    },
+    "footerComponent": {
+        "copyright": {
+            "text": "Copyright Template Christopher Kumla 2022"
+        }
+    }
+}

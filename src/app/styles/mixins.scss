@@ -1,0 +1,534 @@
+@use "./variables.scss" as variable;
+
+@mixin globalStyle {
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family: Merriweather, serif;
+        overflow-x: hidden;
+    }
+    li {
+        list-style-type: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    .d_flex {
+        display: flex;
+    }
+    .fd_column {
+        @media (max-width: variable.$breakpoint_tablet) {
+            flex-direction: column;
+        }
+    }
+    .uppercase {
+        text-transform: uppercase;
+    }
+    h1 {
+        font-size:4.5rem;
+        @media(max-width: variable.$breakpoint_tablet) {
+            font-size: calc(4.5rem/1.15);
+        }
+        @media(max-width: variable.$breakpoint_mobile) {
+            font-size: calc(4.5rem/1.85);
+        }
+    }
+    h2 {
+        font-size: 2.3rem;
+        @media(max-width: variable.$breakpoint_tablet) {
+            font-size: calc(2.3rem/1.15);
+        }
+        @media(max-width: variable.$breakpoint_mobile) {
+            font-size: calc(2.3rem/1.85);
+        }
+    }
+    h5 {
+        font-size: 1.25rem;
+        @media(max-width: variable.$breakpoint_tablet) {
+            font-size: calc(1.25rem/1.15);
+        }
+        @media(max-width: variable.$breakpoint_mobile) {
+            font-size: calc(1.25rem/1.85);
+        }
+    }
+
+    .margin_section {
+        margin-top: 5rem;
+    }
+    .icon {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@mixin backgroundImgStyle {
+    background-size: cover;
+    background-position: 70% 45%;
+    background-attachment: fixed;
+    height: 70vh;
+}
+
+@mixin headerStyle {
+   .navbar {
+        padding: 20px 104px 0px;
+        align-items: center;
+
+        @media(max-width: variable.$breakpoint_tablet) {
+            padding-left: 54px;
+            padding-right: 54px;
+            padding-bottom: 20px;
+        }
+
+        img {
+            height: 32px;
+            width: 64px;
+        }
+
+        &_list {
+            justify-content: flex-end;
+            gap: 29px;
+            width: 100%;
+
+            @media(max-width: variable.$breakpoint_tablet) {
+                display: none;
+            }
+
+            &_show {
+                @media(max-width: variable.$breakpoint_tablet) {
+                    display: block;
+                    background-color: variable.$secondary_color;
+                    position: fixed;
+                    margin-top: 220px;
+                    margin-left: -94px;
+                    padding-top: 25px;
+                    padding-bottom: 25px;
+                    line-height: 50px;
+                    text-align: center;
+                    z-index: 9999;
+                }
+            }
+
+            a {
+                color: variable.$secondary_color;
+                @media(max-width: variable.$breakpoint_tablet) {
+                    color: variable.$primary_color;
+                }
+            }
+        }
+
+        &_menu_mobile {
+            display: none;
+
+            @media(max-width: variable.$breakpoint_tablet) {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+            }
+
+            &_button {
+                background: none;
+                border: none;
+                svg {
+                    fill: variable.$menu_icon_color;
+                }
+            }
+        }
+    }
+
+    .onScroll {
+        position: fixed;
+        width: 90%;
+        transition: all .2s ease-in-out;
+        background-color: variable.$secondary_color;
+        z-index: 9999;
+        @media(max-width: 1440px) {
+            width: 85%;
+        }
+        @media(max-width: 1045px) {
+            width: 80%;
+        }
+        @media(max-width: variable.$breakpoint_tablet) {
+            width: 87%;
+        }
+        @media(max-width: variable.$breakpoint_mobile) {
+            width: 80%;
+        }
+        a {
+            color: variable.$primary_color;
+        }
+    }
+}
+
+@mixin sectionCenterStyle {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@mixin sectionOneStyle {
+    .backgroundSectionOne {
+        background: url("https://wallpaperaccess.com/full/480944.jpg") no-repeat;
+        @include backgroundImgStyle;
+        color: variable.$primary_color;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 20px;
+
+        @media(max-width: variable.$breakpoint_tablet) {
+            background-position: center;
+            padding-top: calc(20px*2);
+        }
+
+        &_title {
+            line-height: 0px;
+        }
+    }
+}
+
+@mixin sectionTwoStyle {
+    .sectionTwo {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        &_row {
+            justify-content: center;
+            div {
+                width: 100%;
+                div {
+                    width: 200px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-top: 20px;
+
+                    @media (max-width: variable.$breakpoint_tablet) {
+                        width: 100%;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+            &_bloc_one {
+                flex-direction: column;
+                background-color: variable.$secondary_color;
+                color: variable.$primary_color;
+                @media (max-width: variable.$breakpoint_tablet) {
+                    padding-left: 8px;
+                }
+            }
+
+            &_img {
+                justify-content: center;
+            }
+
+            .imgHoverZoom {
+                height: 400px;
+                overflow: hidden;
+                .img {
+                    width: 100%;
+                    height: 400px;
+                    object-fit: cover;
+                }
+            }
+
+            .imgHoverZoom {
+                .img {
+                    transition: transform .5s ease;
+                }
+            }
+
+            .imgHoverZoom:hover {
+                .img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+
+@mixin sectionThreeStyle {
+    .sectionThree {
+        background-image:  linear-gradient(variable.$secondary_color, variable.$secondary_color), url("https://images2.alphacoders.com/270/270200.jpg");
+        @include backgroundImgStyle;
+        background-blend-mode: saturation;
+        font-family: cursive;
+        padding-top: 30px;
+        padding-left: 100px;
+        color: variable.$primary_color;
+        @media(max-width: variable.$breakpoint_tablet) {
+            background-position: center;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+            color: variable.$secondary_color;
+        }
+    }
+}
+
+@mixin sectionFourStyle {
+    .section {
+        background-color: variable.$third_color;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        .sectionFour {
+            @include sectionCenterStyle;
+            &_textBloc {
+                width: 100%;
+                line-height: 32px;
+                margin-right: 5px;
+            }
+            &_imgContainer {
+                @media(max-width: variable.$breakpoint_tablet) {
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                    scroll-behavior: smooth;
+                }
+                &_bloc {
+                    width: 100%;
+                    @media(max-width: variable.$breakpoint_tablet) {
+                        flex: 0 0 100vw;
+                    }
+                    div {
+                        height: 100%;
+                        @media(max-width: variable.$breakpoint_tablet) {
+                            height: 60vh;
+                        }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+            &_page {
+                display: none;
+                @media(max-width: variable.$breakpoint_tablet) {
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 15px;
+                    gap: 15px;
+                }
+            }
+        }
+    }
+}
+
+@mixin sectionFiveStyle {
+    .sectionFive {
+        @include sectionCenterStyle;
+        gap: 20px;
+        &_textBloc {
+            width: 100%;
+            flex-direction: column;
+            justify-content: end;
+            margin-bottom: 2rem;
+        }
+        &_textBloc:nth-child(3) {
+            p {
+                line-height: 28px;
+            }
+        }
+        &_imgBloc {
+            width: 100%;
+            .imgHoverZoom {
+                height: 55vh;
+                overflow: hidden;
+                @media (max-width: variable.$breakpoint_tablet) {
+                    height: 40vh;
+                }
+                .img {
+                    width: 100%;
+                    height: 55vh;
+                    object-fit: cover;
+                    @media (max-width: variable.$breakpoint_tablet) {
+                        height: 40vh;
+                    }
+                }
+            }
+            .imgHoverZoom {
+                .img {
+                    transition: transform .5s ease;
+                }
+            }
+            .imgHoverZoom:hover {
+                .img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        &_snBloc {
+            margin-left: -10px;
+            @media(max-width: variable.$breakpoint_tablet) {
+                justify-content:center;
+            }
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+@mixin sectionSixStyle {
+    .sectionBis {
+        background-color: variable.$fourth_color;
+        .sectionSix {
+           width: 100%;
+
+           &_blocText {
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &_title {
+                    line-height: 4px;
+                }
+                &_text {
+                    width: 14rem;
+                    @media(max-width: variable.$breakpoint_tablet) {
+                        width: 90%;
+                    }
+                }
+                button {
+                    background: none;
+                    border:1px solid variable.$secondary_color;
+                    padding: 10px;
+                    color: variable.$secondary_color;
+                    width: 14rem;
+                    height: 45px;
+                    margin-top: 2rem;
+                    cursor: pointer;
+                    transition: all .75s ease-in-out;
+
+                    &:hover {
+                        background: variable.$secondary_color;
+                        color: variable.$primary_color;
+                        transform: rotateX(360deg);
+                    }
+                }
+            }
+            &_blocImg {
+                width: 100%;
+                justify-content: flex-end;
+                @media (max-width: variable.$breakpoint_tablet) {
+                    justify-content: center;
+                }
+                img {
+                    width: 100%;
+                    height: 60vh;
+                    object-fit: contain;
+                    filter: grayscale(100%);
+                }
+            }
+        }
+    }
+    .sectionSix_sn {
+        background-color: variable.$secondary_color;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        color: variable.$primary_color;
+
+        &_text {
+            text-align: center;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            width: 60vw;
+            margin-left: auto;
+            margin-right: auto;
+            @media(max-width: variable.$breakpoint_tablet) {
+                font-size: calc(2.3rem/1.15);
+            }
+            @media(max-width: variable.$breakpoint_mobile) {
+                font-size: calc(2.3rem/1.85);
+            }
+        }
+        &_sn {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            img {
+                width: 65px;
+                height: 65px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all .75s ease-in-out;
+                @media(max-width: variable.$breakpoint_mobile){
+                    width: calc(65px/2);
+                    height: calc(65px/2);
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+@mixin sectionSevenStyle {
+    .sectionSeven {
+        background-image: url("https://i.pinimg.com/originals/02/07/b6/0207b6b5817da1984c2f08693122f32e.jpg");
+        @include backgroundImgStyle();
+        color: variable.$secondary_color;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 3rem;
+
+        @media(max-width: variable.$breakpoint_tablet) {
+            justify-content: center;
+            padding-right: 0rem;
+        }
+
+        &_newsBloc {
+            width: 500px;
+            @media(max-width: variable.$breakpoint_tablet) {
+                width: 80%;
+            }
+
+            input[type="text"] {
+                width: 300px;
+                height: 50px;
+                padding-left: 1rem;
+                border: 1px solid variable.$menu_icon_color;
+                @media(max-width: variable.$breakpoint_tablet) {
+                    width: 90%;
+                }
+            }
+            input[type="submit"] {
+                width: 100px;
+                height: 53px;
+                border: none;
+                background: variable.$secondary_color;
+                color: variable.$primary_color;
+                cursor: pointer;
+                transition: all .75s ease-in-out;
+
+                &:hover {
+                    background: variable.$primary_color;
+                    color: variable.$secondary_color;
+                    transform: rotateX(360deg);
+                }
+
+                @media(max-width: variable.$breakpoint_tablet) {
+                    width: 93.6%;
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@mixin footerStyle {
+    .footer {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        justify-content: center;
+        p {
+            @media(max-width: variable.$breakpoint_mobile) {
+                margin-left: .75rem;
+                margin-right: .75rem;
+            }
+        }
+    }
+}
